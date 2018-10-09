@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title App
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+  body
+    nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.static-top
+      .container
+        a.navbar-brand(href='/h#') Start Bootstrap
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item.active
+              a.nav-link(href='/h#')
+                | Home
+                span.sr-only (current)
+            li.nav-item
+              a.nav-link(href='/articles/add') Add
+            li.nav-item
+              a.nav-link(href='#') Services
+            li.nav-item
+              a.nav-link(href='#') Contact
+    .container
+      block content
+      br
+      hr
+      footer
+        p Copyright &copy; 2018
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/bootstrap/dist/js/bootstrap.js')

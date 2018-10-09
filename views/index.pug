@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1 #{title}
+    .container
+      table.table
+        tr
+          th Title
+        each article, i in articles
+          tr
+            td
+              a(href="/article/"+article._id)=article.title
+      table.table
+        tr
+          th Author
+        each article, i in articles
+          tr
+            td=article.author
+      table.table
+        tr
+          th Body
+        each article, i in articles
+          tr
+            td=article.body
